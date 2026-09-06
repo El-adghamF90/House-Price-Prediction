@@ -116,8 +116,14 @@ The frontend needs one environment variable, already set in `.env.example`:
 
 Copy `.env.example` to `.env` before running the app:
 
+macOS / Linux:
 ```bash
 cp .env.example .env
+```
+
+Windows (PowerShell):
+```powershell
+copy .env.example .env
 ```
 
 ## Model Metrics (Random Forest — chosen model)
