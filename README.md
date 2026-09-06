@@ -91,13 +91,22 @@ npm install
 npm run dev
 ```
 
-Runs on **http://localhost:5173**.
+Once running, open the app at:
+- **http://localhost:5173**
 
 ### Environment Variables
 
+The frontend needs one environment variable, already set in `.env.example`:
+
 | Variable | Description | Example |
 |---|---|---|
-| `VITE_API_BASE_URL` | Backend API base URL | `http://localhost:8000` |
+| `VITE_API_BASE_URL` | The backend's base URL | `http://localhost:8000` |
+
+Copy `.env.example` to `.env` before running the app:
+
+```bash
+cp .env.example .env
+```
 
 ## Model Metrics (Random Forest — chosen model)
 
