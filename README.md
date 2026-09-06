@@ -138,7 +138,11 @@ Random Forest was selected as the final model due to its substantially higher RÂ
 
 ## Screenshots
 
-*(Add screenshots of the running app here)*
+### Home Page
+![Home Page](screenshots/homepage.png)
+
+### Result Page
+![Result Page](screenshots/result.png)
 
 ## Notes
 
