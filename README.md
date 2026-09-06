@@ -50,30 +50,39 @@ pip install -r requirements.txt
 python -m uvicorn app.main:app --reload
 ```
 
-Runs on **http://localhost:8000**. Interactive docs at **http://localhost:8000/docs**.
+Once running, the backend is available at:
+- **API:** http://localhost:8000
+- **Interactive docs:** http://localhost:8000/docs
 
-### Environment Variables
-
-| Variable | Description | Example |
-|---|---|---|
-| (none required for backend currently) | | |
+No environment variables are required for the backend.
 
 ### API Reference
 
-**GET /health**
+The backend exposes two endpoints.
+
+**1. Health check** — confirms the server is running.
+
 ```bash
 curl http://localhost:8000/health
 ```
-Response: `{"status": "ok"}`
 
-**POST /predict**
+Returns:
+```json
+{"status": "ok"}
+```
+
+**2. Price prediction** — takes property details, returns a predicted price.
+
 ```bash
 curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{"location": "mumbai", "carpet_area_sqft": 800, "floor_num": 3, "bathroom": 2, "balcony": 1, "furnishing": "Furnished", "transaction": "Resale", "ownership": "Freehold", "facing": "East"}'
 ```
-Response: `{"predicted_price": 34381000.0}`
 
+Returns:
+```json
+{"predicted_price": 34381000.0}
+```
 ## Setup — Frontend
 
 ```bash
