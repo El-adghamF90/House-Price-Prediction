@@ -144,6 +144,3 @@ Random Forest was selected as the final model due to its substantially higher RÂ
 ### Result Page
 ![Result Page](screenshots/result.png)
 
-## Notes
-
-- The raw dataset CSV and the trained `.pkl` model are excluded from this repository (large files) â€” regenerate them by following the notebook and dataset instructions above.
