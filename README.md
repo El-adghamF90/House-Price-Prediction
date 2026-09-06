@@ -62,8 +62,14 @@ The backend exposes two endpoints.
 
 **1. Health check** — confirms the server is running.
 
+macOS / Linux:
 ```bash
 curl http://localhost:8000/health
+```
+
+Windows (PowerShell):
+```powershell
+curl.exe http://localhost:8000/health
 ```
 
 Returns:
@@ -73,10 +79,16 @@ Returns:
 
 **2. Price prediction** — takes property details, returns a predicted price.
 
+macOS / Linux:
 ```bash
 curl -X POST http://localhost:8000/predict \
   -H "Content-Type: application/json" \
   -d '{"location": "mumbai", "carpet_area_sqft": 800, "floor_num": 3, "bathroom": 2, "balcony": 1, "furnishing": "Furnished", "transaction": "Resale", "ownership": "Freehold", "facing": "East"}'
+```
+
+Windows (PowerShell):
+```powershell
+curl.exe -X POST http://localhost:8000/predict -H "Content-Type: application/json" -d '{\"location\": \"mumbai\", \"carpet_area_sqft\": 800, \"floor_num\": 3, \"bathroom\": 2, \"balcony\": 1, \"furnishing\": \"Furnished\", \"transaction\": \"Resale\", \"ownership\": \"Freehold\", \"facing\": \"East\"}'
 ```
 
 Returns:
